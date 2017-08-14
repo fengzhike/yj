@@ -1,16 +1,18 @@
 import React from 'react'
-import ProTypes from 'prop-types'
+import PropTypes from 'prop-types'
+import Nav from './nav'
 
+const subtraction = ({ onAChange, onBChange,a, b, c, push  }) => (
+    <div>
+        <Nav push ={push}/>
+        <span>减法：</span>
+        <input onChange={onAChange} value={a} />
+        -
+        <input onChange={onBChange} value={b} />
+        =
+        <input value={c}/>
+    </div>
 
-const substraction =({onAChange,onBChange,a,b,c})=>(
-	<div>
-		<input onChange = {onAChange} value = {a}/>
-		-
-		<input onChange = {onAChange} value = {b}/>
-		=
-		<input onChange = {onAChange} value = {c}/>
-	</div>
 )
 
-export default substraction
-
+export default subtraction
